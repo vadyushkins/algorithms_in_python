@@ -4,7 +4,7 @@ from typing import Dict, List
 def bfs(
     graph: Dict[int, List[int]],
     source_node: int,
-):
+) -> List[int]:
     from collections import deque
 
     n = len(graph)

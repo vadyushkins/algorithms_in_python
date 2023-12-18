@@ -4,7 +4,7 @@ from typing import Dict, List, Tuple
 def dijkstra(
     graph: Dict[int, List[Tuple[int, int]]],
     source_node: int,
-):
+) -> List[int]:
     n = len(graph)
     distance = [-1] * n
     relaxed = [False] * n
