@@ -45,5 +45,5 @@ tests = [
 
 
 @pytest.mark.parametrize("test", [i for i in range(len(tests))])
-def test_dijkstra(test):
+def test(test):
     assert dfs(**tests[test]["input"]) == tests[test]["expected"]
