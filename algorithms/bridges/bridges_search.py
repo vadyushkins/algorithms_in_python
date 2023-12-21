@@ -1,7 +1,7 @@
 from typing import Dict, List, Tuple
 
 
-def bridges(graph: Dict[int, List[int]]) -> List[Tuple[int, int]]:
+def bridges_search(graph: Dict[int, List[int]]) -> List[Tuple[int, int]]:
     n = len(graph)
     visited = [False] * n
     entry_time = [-1] * n

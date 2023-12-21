@@ -1,5 +1,5 @@
 import pytest
-from bridges import bridges
+from bridges_search import bridges_search
 
 tests = [
     {
@@ -55,4 +55,6 @@ tests = [
 @pytest.mark.parametrize("test", [i for i in range(len(tests))])
 def test(test):
     order = lambda pairs: sorted([(min(x, y), max(x, y)) for x, y in pairs])
-    assert order(bridges(**tests[test]["input"])) == order(tests[test]["expected"])
+    assert order(bridges_search(**tests[test]["input"])) == order(
+        tests[test]["expected"]
+    )
