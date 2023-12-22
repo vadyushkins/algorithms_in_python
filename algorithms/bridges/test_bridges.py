@@ -1,5 +1,5 @@
 import pytest
-from bridges_search import bridges_search
+from bridges import bridges_search
 
 tests = [
     {

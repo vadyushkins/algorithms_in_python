@@ -11,7 +11,7 @@ def bridges_search(graph: Dict[int, List[int]]) -> List[Tuple[int, int]]:
     bridges = []
 
     def dfs(node: int, parent: int = -1):
-        nonlocal visited, entry_time, lowpoint, timer
+        nonlocal visited, entry_time, lowpoint, timer, bridges
         visited[node] = True
         entry_time[node] = timer
         lowpoint[node] = timer
