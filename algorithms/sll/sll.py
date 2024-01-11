@@ -30,15 +30,23 @@ class SinglyLinkedList:
 
     def pop_back(self):
         if self.tail is not None:
-            new_tail = self.head
-            while new_tail.next.next is not None:
-                new_tail = new_tail.next
-            new_tail.next = None
-            self.tail = new_tail
+            if self.head.next is None:
+                self.head = None
+                self.tail = None
+            else:
+                new_tail = self.head
+                while new_tail.next.next is not None:
+                    new_tail = new_tail.next
+                new_tail.next = None
+                self.tail = new_tail
 
     def pop_front(self):
         if self.head is not None:
-            self.head = self.head.next
+            if self.head.next is None:
+                self.head = None
+                self.tail = None
+            else:
+                self.head = self.head.next
 
     def find_item(self, data: Any):
         current = self.head

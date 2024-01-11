@@ -83,6 +83,13 @@ tests = [
     {
         "input": [
             "push_back 1",
+            "pop_back",
+        ],
+        "expected": [],
+    },
+    {
+        "input": [
+            "push_back 1",
             "pop_front",
         ],
         "expected": [],
