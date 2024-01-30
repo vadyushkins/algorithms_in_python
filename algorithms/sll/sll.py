@@ -48,7 +48,7 @@ class SinglyLinkedList:
             else:
                 self.head = self.head.next
 
-    def find_item(self, data: Any):
+    def find_item(self, data: Any) -> bool:
         current = self.head
         while current is not None:
             if current.data == data:
