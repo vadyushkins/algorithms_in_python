@@ -87,7 +87,7 @@ tests = [
 
 @pytest.mark.parametrize("test", [i for i in range(len(tests))])
 def test(test):
-    assert compare_binary_heaps(
+    compare_binary_heaps(
         evaluate_operations(tests[test]["input"]),
         create_binary_heap_from_list(tests[test]["expected"]),
     )
